@@ -1,0 +1,61 @@
+heaПервое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir folder_name
+3) Зайти в папку - cd folder_name
+4) Создать 3 папки - mkdir test1 test2 test3
+5) Зайти в любоую папку - cd test1
+6) Создать 5 файлов (3 txt, 2 json) - touch one.txt two.txt three.txt file1.json file2.json
+7) Создать 3 папки - mkdir nn1 nn2 nn3
+8. Вывести список содержимого папки - ls or (ls -l) or (ls -la)
+9) + Открыть любой txt файл - vim one.txt
+10) + написать туда что-нибудь, любой текст. - i
+11) + сохранить и выйти.- ESC :wq
+12) Выйти из папки на уровень выше - cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv file.json file1.json nn1/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp one.txt two.txt nn2/
+15) Найти файл по имени - find . -name one.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает:
+tail -f one.txt
+less +F one.txt
+
+grep Alexander one.txt
+#or
+grep -i aleXander one.txt
+#or
+grep -R Alexander .
+17) вывести несколько первых строк из текстового файла - head -n2 one.txt
+18) вывести несколько последних строк из текстового файла - tail -n2 one.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less one.txt
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl http://162.55.220.72:5005/terminal-hw-request
+#than
+curl "http://162.55.220.72:5005/get_method?name=AlexanderF&age=32"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+touch myscript
+vim myscript
+
+# write script:
+
+#!/bin/bash
+cd script1
+mkdir test1 test2 test3
+cd test1
+touch file1.txt file2.txt file3.txt name1.json name2.json
+mkdir nn1 nn2 nn3
+ls -la
+mv name1.json name2.json nn1/
+
+ESC :wq
+chmod +x ./myscript
+./myscript

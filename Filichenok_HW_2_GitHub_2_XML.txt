@@ -1,0 +1,130 @@
+XML
+ 21. Создать внешний репозиторий c названием XML.
+
+- Go to website GitHub.com to the main page and open the tab "Repositories"
+- Than click the button "New"
+- Create new repository with name "XML"
+- Choose public version in the first checkbox and Initialize this repository with
+README file in the second
+- Press the button "Create repository"
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+
+- on the page that opens click the button "Code"
+- copy the HTTPS link and run Git Bash
+- write in Terminal: git clone https://github.com/shoorische/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+
+- Write: cd XML
+- Write: touch new.xml
+
+ 24. Добавить файл под гит.
+
+- Write: git add new.xml
+
+ 25. Закоммитить файл.
+
+- Write: git commit -m "its my first xml-file"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+
+- Write: git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+- vim new.xml and press "I"
+- write:
+<?xml version="1.0" encoding="UTF-8"?>
+<aboutme>
+<title>About Me</title
+	<fullname>
+		<firstname>Alexander</firstname>
+		<patronymic>Vladimirovich</patronymic>
+		<surname>Filichenok</surname>
+	</fullname>
+	<age>32</age>
+	<pets>1</pets>
+	<disiredsalary>500</disiredsalary>
+</aboutme>
+- Press "ESC" and :wq
+
+ 28. Отправить изменения на внешний репозиторий.
+
+- Write: git add new.xml
+- Write: git commit -m "write some words about me"
+- Write: git push
+
+ 29. Создать файл preferences.xml
+
+- Write: touch preferences.json
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+
+- Write: vim preferences.xml
+- Press "I"
+- Write:
+<?xml version="1.0" encoding="UTF-8"?>
+<favoritethings>
+<title>Favorite Things</title>
+	<film>Pulp Fiction</film>
+	<series>Scrubs</series>
+	<food>Pasta</food>
+	<season>Summer</season>
+	<country>USA</country>
+</favoritethings>
+- Press "ESC" and :wq
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+
+- Write: cat > skills.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+<hardskill1>Git Bash</hardskill1>
+<hardskill2>JSON_XML</hardskill2>
+</skills>
+- Press Ctrl+C
+
+ 32. Сделать коммит в одну строку.
+
+- Write: git add preferences.xml skills.xml 
+or write git add .
+- Write: git commit -m "and two new xml-files"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+
+-Write: git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+
+- Going to website https://github.com/shoorische/XML
+- Press "add file" and than press "create new file"
+- Named file as "bug_report.xml"
+- Press button "Commit new file"
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+- Press "Commit changes" button
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<bug_report>
+<project>project_name</project>
+<ID>1</ID>
+<created_date>17.02.2022</created_date>
+<summary>There is no logo on the welcome page</summary>
+<status>Open</status>
+<priority>Major</priority>
+<severity>minor</severity>
+<incident_type>Bug</incident_type>
+<description>If the administrator visits the welcome page, the logo disappears</description>
+</bug_report>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+- Write "update xml-files" and press "Commit changes" button
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+
+- Write: git pull
